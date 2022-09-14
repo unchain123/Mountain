@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 
     private lazy var mountainDataSource = self.configureDataSource(with: tableView)
 
+    private var data = MountainModel.sample
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tableView)
@@ -33,12 +35,13 @@ class ViewController: UIViewController {
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapPlusButton))
         configureLayouts()
-        updateTableView(mountainDataSource!, by: MountainModel.sample)
+        updateTableView(by: data)
     }
 
     @objc private func didTapPlusButton() {
         let viewController = AddViewController()
         viewController.modalPresentationStyle = .formSheet
+        viewController.delegate = self
         self.navigationController?.present(viewController, animated: true, completion: nil)
     }
 
@@ -51,13 +54,12 @@ class ViewController: UIViewController {
         ])
     }
 
-    func updateTableView(_ dataSource: DataSource,
-                         by data: [MountainModel]) {
+    func updateTableView(by data: [MountainModel]) {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
         snapshot.appendItems(data)
 
-        dataSource.apply(snapshot,
+        mountainDataSource?.apply(snapshot,
                          animatingDifferences: false,
                          completion: nil)
     }
@@ -73,5 +75,12 @@ class ViewController: UIViewController {
         })
 
         return dataSource
+    }
+}
+
+extension ViewController: AddViewControllerDelegate {
+    func update(model: MountainModel) {
+        self.data.append(model)
+        updateTableView(by: data)
     }
 }

@@ -99,7 +99,7 @@ class MountainTableViewCell: UITableViewCell {
     }
 
     func bind(mountainModel: MountainModel) {
-        mountainImageView.image = UIImage(named: mountainModel.image)
+        mountainImageView.image = mountainModel.image
         titleLabel.text = mountainModel.name
         heightLabel.text = "높이: \(mountainModel.height)m"
         distanceLabel.text = "거리: \(mountainModel.distance)km"

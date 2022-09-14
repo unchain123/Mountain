@@ -15,6 +15,7 @@
 		90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */; };
 		90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE528D165E100D31AC9 /* MountainModel.swift */; };
 		90162FE728D183DD00D31AC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DC28D161A600600C4B /* ViewController.swift */; };
+		90162FE928D197BE00D31AC9 /* AddViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE828D197BE00D31AC9 /* AddViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8FBFB2EC28D186FE00600C4B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainTableViewCell.swift; sourceTree = "<group>"; };
 		90162FE528D165E100D31AC9 /* MountainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainModel.swift; sourceTree = "<group>"; };
+		90162FE828D197BE00D31AC9 /* AddViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +64,10 @@
 			children = (
 				8FBFB2D828D161A600600C4B /* AppDelegate.swift */,
 				8FBFB2DA28D161A600600C4B /* SceneDelegate.swift */,
-				8FBFB2DC28D161A600600C4B /* ViewController.swift */,
 				90162FE528D165E100D31AC9 /* MountainModel.swift */,
+				8FBFB2DC28D161A600600C4B /* ViewController.swift */,
 				8FBFB2EC28D186FE00600C4B /* AddViewController.swift */,
+				90162FE828D197BE00D31AC9 /* AddViewControllerDelegate.swift */,
 				90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */,
 				8FBFB2E128D161A800600C4B /* Assets.xcassets */,
 				8FBFB2E328D161A800600C4B /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			files = (
 				90162FE728D183DD00D31AC9 /* ViewController.swift in Sources */,
 				90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */,
+				90162FE928D197BE00D31AC9 /* AddViewControllerDelegate.swift in Sources */,
 				8FBFB2ED28D186FE00600C4B /* AddViewController.swift in Sources */,
 				90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */,
 				8FBFB2D928D161A600600C4B /* AppDelegate.swift in Sources */,

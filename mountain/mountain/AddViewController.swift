@@ -8,7 +8,6 @@
 import UIKit
 
 class AddViewController: UIViewController {
-
     lazy var imageAddButton: UIButton = {
         let button = UIButton()
         let image = UIImage(systemName: "plus")
@@ -16,12 +15,6 @@ class AddViewController: UIViewController {
         button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
-    }()
-
-    let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
     }()
 
     private let imagePickerController: UIImagePickerController = {
@@ -66,7 +59,7 @@ class AddViewController: UIViewController {
     let verticalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 10
+        stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -80,6 +73,18 @@ class AddViewController: UIViewController {
         return stackView
     }()
 
+    let addButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .green
+        button.setTitle("Mountain Add", for: .normal)
+        button.addTarget(self, action: #selector(addMountain), for: .touchUpInside)
+
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
+    weak var delegate: AddViewControllerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -90,6 +95,9 @@ class AddViewController: UIViewController {
     func setupSubView() {
         view.addSubview(imageAddButton)
         view.addSubview(verticalStackView)
+        view.addSubview(addButton)
+
+        imagePickerController.delegate = self
 
         verticalStackView.addArrangedSubview(titleTextField)
         verticalStackView.addArrangedSubview(heightTextField)
@@ -101,6 +109,21 @@ class AddViewController: UIViewController {
         present(imagePickerController, animated: true)
     }
 
+    @objc func addMountain() {
+        guard let name = titleTextField.text,
+              let height = Double(heightTextField.text!),
+              let distance = Double(distanceTextField.text!),
+              let timeInterval = timeIntervalTextField.text,
+              let image = imageAddButton.imageView?.image else { return }
+
+        delegate?.update(model: MountainModel(name: name,
+                                              height: height,
+                                              distance: distance,
+                                              timeInterval: timeInterval,
+                                              image: image))
+        self.dismiss(animated: true)
+    }
+
     func setupLayout() {
         NSLayoutConstraint.activate([
             imageAddButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -108,12 +131,35 @@ class AddViewController: UIViewController {
             imageAddButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             imageAddButton.heightAnchor.constraint(equalToConstant: 300),
 
-            verticalStackView.topAnchor.constraint(equalTo: imageAddButton.bottomAnchor),
-            verticalStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            verticalStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            verticalStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -280)
+            verticalStackView.topAnchor.constraint(equalTo: imageAddButton.bottomAnchor, constant: 50),
+            verticalStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            verticalStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            verticalStackView.heightAnchor.constraint(equalToConstant: 200),
+
+            addButton.topAnchor.constraint(equalTo: verticalStackView.bottomAnchor, constant: 50),
+            addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
+            addButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            addButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
         ])
+    }
+}
 
+// MARK: - UIImagePickerControllerDelegate
 
+extension AddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var newImage = UIImage()
+
+        if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            newImage = possibleImage
+        } else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            newImage = possibleImage
+        }
+
+        imageAddButton.setImage(newImage, for: .normal)
+
+        picker.dismiss(animated: true,
+                       completion: nil)
     }
 }
