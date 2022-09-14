@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		8FBFB2D928D161A600600C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2D828D161A600600C4B /* AppDelegate.swift */; };
 		8FBFB2DB28D161A600600C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DA28D161A600600C4B /* SceneDelegate.swift */; };
-		8FBFB2DD28D161A600600C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DC28D161A600600C4B /* ViewController.swift */; };
 		8FBFB2E228D161A800600C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFB2E128D161A800600C4B /* Assets.xcassets */; };
 		8FBFB2E528D161A800600C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFB2E328D161A800600C4B /* LaunchScreen.storyboard */; };
 		90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */; };
 		90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE528D165E100D31AC9 /* MountainModel.swift */; };
+		90162FE728D183DD00D31AC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DC28D161A600600C4B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,9 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90162FE728D183DD00D31AC9 /* ViewController.swift in Sources */,
 				90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */,
 				90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */,
-				8FBFB2DD28D161A600600C4B /* ViewController.swift in Sources */,
 				8FBFB2D928D161A600600C4B /* AppDelegate.swift in Sources */,
 				8FBFB2DB28D161A600600C4B /* SceneDelegate.swift in Sources */,
 			);
@@ -288,6 +288,7 @@
 				INFOPLIST_FILE = mountain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,6 +319,7 @@
 				INFOPLIST_FILE = mountain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

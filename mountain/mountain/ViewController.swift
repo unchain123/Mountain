@@ -28,8 +28,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tableView)
+        self.navigationItem.title = "Mountain"
+        self.view.backgroundColor = .systemBackground
+
+        self.navigationController?.navigationItem.rightBarButtonItem =
+        UIBarButtonItem(image: UIImage(systemName: "plus"),
+                        style: .done,
+                        target: self,
+                        action: #selector(didTapPlusButton))
+
         configureLayouts()
         updateTableView(mountainDataSource!, by: MountainModel.sample)
+    }
+
+    @objc private func didTapPlusButton() {
+        
     }
 
     func configureLayouts() {
