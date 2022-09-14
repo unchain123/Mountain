@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(MountainTableViewCell.self, forCellReuseIdentifier: MountainTableViewCell.identifier)
         return tableView
     }()
 
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tableView)
+        configureLayouts()
+        updateTableView(mountainDataSource!, by: MountainModel.sample)
     }
 
     func configureLayouts() {
@@ -54,7 +57,7 @@ class ViewController: UIViewController {
                                                            for: indexPath) as? MountainTableViewCell else {
                 return UITableViewCell()
             }
-
+            cell.bind(mountainModel: model)
             return cell
         })
 
