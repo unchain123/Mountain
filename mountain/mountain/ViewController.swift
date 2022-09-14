@@ -31,18 +31,15 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Mountain"
         self.view.backgroundColor = .systemBackground
 
-        self.navigationController?.navigationItem.rightBarButtonItem =
-        UIBarButtonItem(image: UIImage(systemName: "plus"),
-                        style: .done,
-                        target: self,
-                        action: #selector(didTapPlusButton))
-
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapPlusButton))
         configureLayouts()
         updateTableView(mountainDataSource!, by: MountainModel.sample)
     }
 
     @objc private func didTapPlusButton() {
-        
+        let viewController = AddViewController()
+        viewController.modalPresentationStyle = .formSheet
+        self.navigationController?.present(viewController, animated: true, completion: nil)
     }
 
     func configureLayouts() {

@@ -11,6 +11,7 @@
 		8FBFB2DB28D161A600600C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DA28D161A600600C4B /* SceneDelegate.swift */; };
 		8FBFB2E228D161A800600C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFB2E128D161A800600C4B /* Assets.xcassets */; };
 		8FBFB2E528D161A800600C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFB2E328D161A800600C4B /* LaunchScreen.storyboard */; };
+		8FBFB2ED28D186FE00600C4B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2EC28D186FE00600C4B /* AddViewController.swift */; };
 		90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */; };
 		90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE528D165E100D31AC9 /* MountainModel.swift */; };
 		90162FE728D183DD00D31AC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DC28D161A600600C4B /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		8FBFB2E128D161A800600C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FBFB2E428D161A800600C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FBFB2E628D161A800600C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBFB2EC28D186FE00600C4B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainTableViewCell.swift; sourceTree = "<group>"; };
 		90162FE528D165E100D31AC9 /* MountainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 				8FBFB2DA28D161A600600C4B /* SceneDelegate.swift */,
 				8FBFB2DC28D161A600600C4B /* ViewController.swift */,
 				90162FE528D165E100D31AC9 /* MountainModel.swift */,
+				8FBFB2EC28D186FE00600C4B /* AddViewController.swift */,
 				90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */,
 				8FBFB2E128D161A800600C4B /* Assets.xcassets */,
 				8FBFB2E328D161A800600C4B /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				90162FE728D183DD00D31AC9 /* ViewController.swift in Sources */,
 				90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */,
+				8FBFB2ED28D186FE00600C4B /* AddViewController.swift in Sources */,
 				90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */,
 				8FBFB2D928D161A600600C4B /* AppDelegate.swift in Sources */,
 				8FBFB2DB28D161A600600C4B /* SceneDelegate.swift in Sources */,
