@@ -13,6 +13,7 @@ class MountainTableViewCell: UITableViewCell {
     let verticalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
+        stackView.spacing = 30
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -20,6 +21,7 @@ class MountainTableViewCell: UITableViewCell {
     let horizontalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -32,23 +34,28 @@ class MountainTableViewCell: UITableViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.font = UIFont.preferredFont(forTextStyle: .title1)
         return label
     }()
 
     let heightLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     let distanceLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
     let timeIntervalLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -77,10 +84,13 @@ class MountainTableViewCell: UITableViewCell {
 
     func configureLayout() {
         NSLayoutConstraint.activate([
-            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            verticalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            verticalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+            verticalStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            verticalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+
+            mountainImageView.heightAnchor.constraint(equalTo: mountainImageView.widthAnchor),
+            mountainImageView.widthAnchor.constraint(equalToConstant: 100),
 
             titleLabel.leadingAnchor.constraint(equalTo: mountainImageView.leadingAnchor, constant: 10),
             titleLabel.bottomAnchor.constraint(equalTo: mountainImageView.bottomAnchor, constant: -10),
@@ -91,8 +101,8 @@ class MountainTableViewCell: UITableViewCell {
     func bind(mountainModel: MountainModel) {
         mountainImageView.image = UIImage(named: mountainModel.image)
         titleLabel.text = mountainModel.name
-        heightLabel.text = "\(mountainModel.height)m"
-        distanceLabel.text = "\(mountainModel.distance)km"
-        timeIntervalLabel.text = "\(mountainModel.timeInterval)"
+        heightLabel.text = "높이: \(mountainModel.height)m"
+        distanceLabel.text = "거리: \(mountainModel.distance)km"
+        timeIntervalLabel.text = "시간: \(mountainModel.timeInterval)"
     }
 }

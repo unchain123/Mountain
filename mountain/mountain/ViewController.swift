@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
         tableView.register(MountainTableViewCell.self, forCellReuseIdentifier: MountainTableViewCell.identifier)
         return tableView
     }()
