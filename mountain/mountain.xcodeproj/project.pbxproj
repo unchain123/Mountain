@@ -10,9 +10,10 @@
 		8FBFB2D928D161A600600C4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2D828D161A600600C4B /* AppDelegate.swift */; };
 		8FBFB2DB28D161A600600C4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DA28D161A600600C4B /* SceneDelegate.swift */; };
 		8FBFB2DD28D161A600600C4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DC28D161A600600C4B /* ViewController.swift */; };
-		8FBFB2E028D161A600600C4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFB2DE28D161A600600C4B /* Main.storyboard */; };
 		8FBFB2E228D161A800600C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFB2E128D161A800600C4B /* Assets.xcassets */; };
 		8FBFB2E528D161A800600C4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBFB2E328D161A800600C4B /* LaunchScreen.storyboard */; };
+		90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */; };
+		90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90162FE528D165E100D31AC9 /* MountainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,11 @@
 		8FBFB2D828D161A600600C4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FBFB2DA28D161A600600C4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8FBFB2DC28D161A600600C4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8FBFB2DF28D161A600600C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FBFB2E128D161A800600C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FBFB2E428D161A800600C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FBFB2E628D161A800600C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainTableViewCell.swift; sourceTree = "<group>"; };
+		90162FE528D165E100D31AC9 /* MountainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MountainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,8 @@
 				8FBFB2D828D161A600600C4B /* AppDelegate.swift */,
 				8FBFB2DA28D161A600600C4B /* SceneDelegate.swift */,
 				8FBFB2DC28D161A600600C4B /* ViewController.swift */,
-				8FBFB2DE28D161A600600C4B /* Main.storyboard */,
+				90162FE528D165E100D31AC9 /* MountainModel.swift */,
+				90162FE328D1641500D31AC9 /* MountainTableViewCell.swift */,
 				8FBFB2E128D161A800600C4B /* Assets.xcassets */,
 				8FBFB2E328D161A800600C4B /* LaunchScreen.storyboard */,
 				8FBFB2E628D161A800600C4B /* Info.plist */,
@@ -127,7 +130,6 @@
 			files = (
 				8FBFB2E528D161A800600C4B /* LaunchScreen.storyboard in Resources */,
 				8FBFB2E228D161A800600C4B /* Assets.xcassets in Resources */,
-				8FBFB2E028D161A600600C4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90162FE428D1641500D31AC9 /* MountainTableViewCell.swift in Sources */,
+				90162FE628D165E100D31AC9 /* MountainModel.swift in Sources */,
 				8FBFB2DD28D161A600600C4B /* ViewController.swift in Sources */,
 				8FBFB2D928D161A600600C4B /* AppDelegate.swift in Sources */,
 				8FBFB2DB28D161A600600C4B /* SceneDelegate.swift in Sources */,
@@ -147,14 +151,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8FBFB2DE28D161A600600C4B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FBFB2DF28D161A600600C4B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8FBFB2E328D161A800600C4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,12 +283,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QW8FL6CWBT;
+				DEVELOPMENT_TEAM = GDKDK6KP5Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mountain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,9 +297,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = unchain.mountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,12 +313,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QW8FL6CWBT;
+				DEVELOPMENT_TEAM = GDKDK6KP5Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mountain/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,9 +327,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = unchain.mountain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
